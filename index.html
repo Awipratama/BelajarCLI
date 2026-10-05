@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linux CLI — Interactive Module</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">⌘</span>
+        <div>
+          <strong>Linux CLI</strong><small>Interactive Practicum Module</small>
+        </div>
+      </div>
+      <button id="menuBtn" class="menu-btn">☰</button>
+    </header>
+
+    <div class="layout">
+      <aside id="sidebar">
+        <div class="side-title">MATERI</div>
+        <nav id="nav"></nav>
+        <div class="progress-box">
+          <div class="progress-label">
+            <span>Progress</span><b id="progressText">0%</b>
+          </div>
+          <div class="progress"><i id="progressBar"></i></div>
+        </div>
+      </aside>
+
+      <main>
+        <section class="hero">
+          <div>
+            <span class="eyebrow">PRAKTIKUM GNU/LINUX</span>
+            <h1>Belajar Linux CLI<br /><em>secara bertahap.</em></h1>
+            <p>
+              Modul interaktif satu halaman untuk memahami command line,
+              filesystem, permission, shell, process, kernel module, system
+              call, dan LFS.
+            </p>
+            <a href="#materi" class="primary-btn">Mulai Belajar ↓</a>
+          </div>
+          <div class="hero-terminal">
+            <div class="term-head">
+              <span></span><span></span><span></span><label>terminal</label>
+            </div>
+            <pre><span class="muted">$</span> whoami
+student
+<span class="muted">$</span> pwd
+/home/student
+<span class="muted">$</span> ls
+Documents  Downloads  Projects
+<span class="muted">$</span> <b>_</b></pre>
+          </div>
+        </section>
+
+        <section id="materi" class="content">
+          <div id="lesson"></div>
+          <section class="demo-card">
+            <div class="section-kicker">PRAKTIK DEMO</div>
+            <h2>Terminal Simulator</h2>
+            <p>
+              Gunakan simulator ini untuk memahami alur command. Ini bukan
+              terminal Linux sungguhan; browser hanya mensimulasikan output
+              aman.
+            </p>
+            <div class="terminal">
+              <div class="term-head">
+                <span></span><span></span><span></span><label>linux-demo</label>
+              </div>
+              <div id="output" class="term-output">
+                Linux CLI Demo — ketik <b>help</b> untuk melihat command yang
+                tersedia.
+              </div>
+              <div class="term-input">
+                <span>$</span
+                ><input
+                  id="command"
+                  autocomplete="off"
+                  spellcheck="false"
+                  placeholder="contoh: ls -la"
+                /><button id="run">Run</button>
+              </div>
+            </div>
+            <div class="quick-cmds">
+              <button data-cmd="whoami">whoami</button>
+              <button data-cmd="pwd">pwd</button>
+              <button data-cmd="ls -la">ls -la</button>
+              <button data-cmd="uname -r">uname -r</button>
+              <button data-cmd="date">date</button>
+              <button data-cmd="help">help</button>
+            </div>
+          </section>
+
+          <section class="check-card">
+            <div class="section-kicker">CEK PEMAHAMAN</div>
+            <h2>Mini Quiz</h2>
+            <div id="quiz"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
